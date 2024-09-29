@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Photo Editor</title>
+    <link rel="stylesheet" href="ps.css"><link rel="stylesheet" href="gp.css">
+
+</head>
+<body>
+    <h1>PHOTO FUSIONS</h1>
+    <input type="file" id="upload" accept="image/*">
+    <div class="editor">
+        <canvas id="canvas"></canvas>
+    </div>
+    <div class="controls">
+        <h2>Adjust Image</h2>
+        <label>Brightness:</label>
+        <input type="range" id="brightness" min="0" max="200" value="100">
+        <label>Contrast:</label>
+        <input type="range" id="contrast" min="0" max="200" value="100">
+        <label>Blur:</label>
+        <input type="range" id="blur" min="0" max="10" value="0">
+        <label>Saturation:</label>
+        <input type="range" id="saturation" min="0" max="200" value="100">
+        <label>Exposure:</label>
+        <input type="range" id="exposure" min="0" max="200" value="100">
+        <label>Hue-Rotate:</label>
+        <input type="range" id="hue" min="0" max="360" value="0">
+        <label>Rotate:</label>
+        <input type="range" id="rotate" min="0" max="360" value="0">
+        <br><br>
+        <button onclick="resetFilters()">Reset</button>
+        <h3>Filters</h3>
+        <button onclick="applyFilter('grayscale')">Grayscale</button>
+        <button onclick="applyFilter('sepia')">Sepia</button>
+        <button onclick="applyFilter('vivid')">Vivid</button>
+        <button onclick="applyFilter('vivid-warm')">Vivid Warm</button>
+        <button onclick="applyFilter('vivid-cool')">Vivid Cool</button>
+        <button onclick="applyFilter('dramatic')">Dramatic</button>
+        <button onclick="applyFilter('dramatic-warm')">Dramatic Warm</button>
+        <button onclick="applyFilter('dramatic-cool')">Dramatic Cool</button>
+        <button onclick="applyFilter('mono')">Mono</button>
+        <button onclick="applyFilter('silvertone')">Silvertone</button>
+        <button onclick="applyFilter('noir')">Noir</button>
+        <button onclick="applyFilter('tonal')">Tonal</button>
+        <button onclick="applyFilter('fade')">Fade</button>
+        <button onclick="applyFilter('transfer')">Transfer</button>
+        <button onclick="applyFilter('instant')">Instant</button>
+        <button onclick="applyFilter('cyberpunk')">Cyberpunk</button>
+        <button onclick="applyFilter('dark-gold')">Dark Gold</button>
+        <button onclick="applyFilter('dark-autumn')">Dark Autumn</button>
+        <button onclick="applyFilter('remove-bg')">Remove Background</button>
+        <h3>Download</h3>
+        <button onclick="downloadImage('png')">Download PNG</button>
+        <button onclick="downloadImage('jpeg')">Download JPEG</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
